@@ -1,0 +1,31 @@
+@import '~assets/styles/base.scss';
+
+/*我的*/
+.info{
+    margin: 1rem 0.4rem;
+    display: flex;
+
+	.avatar-container{
+		margin-right: 0.2rem;
+		position: relative;
+
+		img{
+	        display: block;
+	        @include roundImg(2rem);	
+
+	        &.avatar{
+				position: absolute;
+				left: 0;
+				top: 0;
+	        }		
+		}
+	}
+
+    .username-email{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include fs(18);
+    }
+}
+    

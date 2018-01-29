@@ -1,0 +1,126 @@
+// 常量
+$x0: #000;
+$x03: #030303;
+$x3: #333;
+$x6: #666;
+$x9: #999;
+$c: #ccc;
+$f: #fff;
+$d8: #d8d8d8;
+$d9: #d9d9d9;
+$f3: #f3f3f3;
+$red: #f23071;
+$blue: #30d2f2;
+$blue2: #4790cc;
+
+// 颜色
+@mixin cl($val){
+	color: $val;
+}
+@mixin bgcl($val){
+	background-color: $val;
+}
+@mixin borC($val){
+	border-color: $val;
+}
+
+// 文字
+@mixin ff($val: '微软雅黑'){
+	font-family: $val;
+}
+@mixin fs($val){
+	font-size: $val*1px;
+}
+@mixin fw($val: bold){
+	font-weight: $val;
+}
+
+// 1px边框
+@mixin bor1-base($type){
+	&::#{$type}{
+		display: block;
+		content: '';
+		position: absolute;		
+        @include zIdx(1);
+        pointer-events: none;		
+	}	
+}
+@mixin bor1-top($val:$d9,$type: after){
+	@include bor1-base($type);
+	&::after{
+		width: 100%;
+		height: 1px;
+		@include bgcl($val);
+		left: 0;
+		top: 0;
+		transform: scaleY(0.5);	
+		transform-origin: 0 0;    					
+	}	
+}
+@mixin bor1-bottom($val:$d9,$type: after){
+	@include bor1-base($type);
+	&::after{	
+		width: 100%;
+		height: 1px;
+		@include bgcl($val);
+		left: 0;
+		bottom: 0;
+		transform: scaleY(0.5);	
+		transform-origin: 0 100%;  
+	}		
+}
+@mixin bor1-left($val:$d9,$type: after){
+	@include bor1-base($type);
+	&::#{$type}{	
+		width: 1px;
+		height: 100%;
+		@include bgcl($val);
+		left: 0;
+		top: 0;
+		transform: scaleX(0.5);	
+		transform-origin: 0 0;    			
+	}	
+}
+@mixin bor1-right($val:$d9,$type: after){
+	@include bor1-base($type);
+	&::after{	
+		width: 1px;
+		height: 100%;
+		@include bgcl($val);
+		right: 0;
+		top: 0;
+		transform: scaleX(0.5);	
+		transform-origin: 100% 0;    			
+	}	
+}
+
+// 圆角
+@mixin borR($val: 5px){
+	border-radius: $val;
+}
+
+// 盒子类型
+@mixin bs($val: border-box){
+	box-sizing: $val;
+}
+
+// 层叠性
+@mixin zIdx($val){
+	z-index: $val;
+}
+
+// 背景图片
+@mixin bgImg($val){
+	background: url('assets/img/#{$val}') no-repeat left top;
+}
+@mixin bgSize($x: 100%, $y: auto){
+	background-size: $x $y;
+}
+
+// 圆形图片
+@mixin roundImg($val){
+	width: $val;
+	height: $val;
+	@include borR($val);
+	object-fit: cover;
+}

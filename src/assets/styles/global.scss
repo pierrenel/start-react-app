@@ -1,0 +1,14 @@
+@import '~assets/styles/base.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	@include bgcl($f);
+	font-family: sans-serif,'微软雅黑';
+	line-height: 1;
+}
+
+

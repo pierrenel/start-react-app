@@ -1,0 +1,23 @@
+@import '~assets/styles/base.scss';
+
+/*活动*/
+.default-text{
+	margin-top: 1rem;
+	text-align: center;
+	@include fs(28);
+	@include cl($x6);		
+}
+
+.item-container{
+	height: calc(100vh - 1rem);
+	padding-bottom: 1rem;
+	@include bs;
+}
+
+.item{
+    border-bottom: 1px solid $x3;
+    line-height: 1.5;
+    padding: 0 0.4rem;
+    @include fs(14);
+}
+    

@@ -1,0 +1,33 @@
+@import '~assets/styles/base.scss';
+
+/*首页*/
+.statusBar{
+    margin: 1rem 0 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3{          
+        margin: 0;
+        @include fs(34);
+    }
+    
+    :global(.am-button){
+        margin-left: 0.2rem;
+        padding: 0 0.2rem;
+    }
+}
+
+:global(.iconfont).icon{
+    display: block;
+    text-align: center;
+    @include fs(48);
+    @include cl($blue);
+}     
+
+.cover{
+    margin: 0.8rem auto;
+    display: block;
+    width: 6rem;
+}    
+

@@ -1,0 +1,23 @@
+@import '~assets/styles/base.scss';
+
+/*登录*/
+h3{
+	margin-top: 3rem;
+	text-align: center;
+	@include fs(34);
+}
+
+.form{
+	margin: 0.4rem;
+
+	.cells{
+		position: relative;
+		@include bor1-left($type: before);
+		@include bor1-right($type: after);
+		padding: 0;
+	}
+
+	.submit{
+		margin-top: 0.4rem;
+	}
+}
