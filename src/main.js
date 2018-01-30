@@ -1,9 +1,10 @@
-// use eruda as a devtool
+// use eruda as a debugger tool on your mobile phone
 if(process.env.myEnv != 'normal'){
 	let eruda = require('eruda');
 	eruda.init();
 }
 
+// related lib
 import React,{ Component } from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';

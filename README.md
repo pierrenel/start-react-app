@@ -44,8 +44,8 @@ npm install
         |——acty     
         |——mine     
         ...
-    |——assets       -- static resources,including image,style,and json files
-    |——utils        -- js lib,including filter,fetch etc
+    |——assets       -- static resources, including image,style,and json files
+    |——utils        -- js lib, including filter,fetch etc
     |——store        -- react-redux conf
 |——mock             -- mock conf based on NodeJS
 |——package.json     
@@ -58,11 +58,11 @@ npm install
 
 ## Usage
 ``` 
-npm run mockDev     -- open webpack-dev-server and json-server,live preview your local site in dev env
+npm run mockDev     -- open webpack-dev-server and json-server, live preview your local site in dev env
 
-npm run mockTest    -- pack files into prod/test folder,upload them to your remote site in test env
+npm run mockTest    -- pack files into prod/test folder, upload them to your remote site in test env
 
-npm run mockNormal  -- pack files into prod/normal folder,upload them to your remote site in normal env
+npm run mockNormal  -- pack files into prod/normal folder, upload them to your remote site in normal env
 ```
 
 ## Env
