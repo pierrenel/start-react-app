@@ -18,7 +18,7 @@ export default {
 
 			return this.reqActy(0).then((res) => {
 				let newData = res.data;
-				// newData = []; // 假设数据为空
+				// newData = []; // suppose no more data
 				dispatch({
 					type: 'acty_pullDown_off',
 					payload: {
@@ -43,7 +43,7 @@ export default {
 				newPage = state.acty.page + 1,
 				dataSource = state.acty.dataSource;
 			return this.reqActy(newPage).then((res) => {
-				 if(newPage >= 2) res.data = []; // 假设一共只有3页
+				 if(newPage >= 2) res.data = []; // suppose the upper limit is 2
 
 	            let oldData = dataSource._dataBlob ? dataSource._dataBlob.s1 : [],
 	                newData = oldData.concat(res.data);

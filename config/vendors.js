@@ -1,3 +1,4 @@
+// common chunks
 module.exports = [
     'react','react-dom','react-router-dom',
     'redux','redux-logger','redux-thunk','react-redux','react-router-redux',

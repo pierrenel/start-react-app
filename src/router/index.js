@@ -10,10 +10,10 @@ import Index from '../components/index';
 import Acty from '../components/acty';
 import Mine from '../components/mine';
 
-// 认证路由
+// authenticate a route
 import Auth from './auth';
 
-// 按需加载
+// load route on demand
 // import Bundle from './bundle';
 // const AsyncContainer = import('../components/Async');
 // const Async = (props) => (

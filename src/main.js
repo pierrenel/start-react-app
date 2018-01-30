@@ -1,10 +1,9 @@
-// 引入调试工具
+// use eruda as a devtool
 if(process.env.myEnv != 'normal'){
 	let eruda = require('eruda');
 	eruda.init();
 }
 
-// 引入基础类库和配置文件
 import React,{ Component } from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -12,20 +11,20 @@ import { Provider } from 'react-redux';
 import Router from './router';
 import configureStore from './store';
 
-// 加载全局样式
+// global style
 import 'assets/styles/iconfont/font.css';    
 import 'assets/styles/global.scss';    
-// 加载自定义插件
+// custom plugin
 import 'utils/plugin';
 
-// 点击延迟
+// handle click delay
 const FastClick = require('fastclick');
 FastClick.attach(document.body);
 
-// 初始化store对象
+// initialize redux store
 const store = configureStore();
 
-// 自定义函数，将组件加载到DOM元素
+// load component to DOM ele
 const renderToDOM = (Component) => {
 	render(
 		<AppContainer warnings={false}>
@@ -37,10 +36,10 @@ const renderToDOM = (Component) => {
 	);
 };
 
-// 加载路由组件
+// load router
 renderToDOM(Router);
 
-// 添加HMR功能
+// add HMR
 if (module.hot) {
 	module.hot.accept('./router', () => {
 		renderToDOM(Router);

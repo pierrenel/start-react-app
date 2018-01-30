@@ -1,4 +1,4 @@
-// 限制名称的长度为多少个字节
+// limit the length of a name to a certain number of bytes
 const limitNameLen = (name,len) => {
 	let arr = name.split(''),sum = 0,result = '';
 

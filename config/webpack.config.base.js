@@ -2,7 +2,7 @@ const path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// 消除所有过时警告
+// eliminate all the deprecation warning from the build process
 process.noDeprecation = true;
 
 module.exports = {

@@ -3,34 +3,34 @@ import qs from 'qs';
 import { Toast } from 'antd-mobile';
 import { token,deviceId,contentType } from './variable';
 
-/***********配置fetch*************/
+/***********fetch conf*************/
 fetchIntercept.register({
     request: function (url, config) {
-        // 显示loading
+        // show loading
         Toast.loading('正在加载',0,null,true);
 
-    	// 添加请求域名
+    	// add api domian 
     	url = process.env.apiURL + url;
 
-        // 初始化配置项
+        // initialize conf
         config = config || {};
         config.params = config.params || {};
         config.headers = config.headers || {};
         config.data = config.data || {};
 
-    	// 添加URL中的请求参数
+    	// add api params
     	let params = Object.assign(config.params,{
             token: token, 
     		deviceId: deviceId
     	});
     	url += '?' + qs.stringify(params);
 
-        // 如果是POST请求
+        // POST
         if(config.method == 'POST' && !config.headers['Content-Type']){
-            // 设置数据格式
+            // set data format in body
             config.headers['Content-Type'] = contentType;
 
-            // 添加body中的上传参数
+            // set uploaded params in body
             config.body = qs.stringify(config.data);
         }
        
@@ -43,7 +43,7 @@ fetchIntercept.register({
     },
 
     response: function (response) {
-        // 隐藏loading
+        // hide loading
         Toast.hide();
 
         return response;

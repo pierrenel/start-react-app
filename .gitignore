@@ -1,4 +1,4 @@
-# 以下目录或者文件不会被提交至版本库
+# The following dir or file will not be commited to remote repo
 node_modules/
 prod/test/
 prod/normal/

@@ -1,4 +1,4 @@
-// 常量
+// constant
 $x0: #000;
 $x03: #030303;
 $x3: #333;
@@ -13,7 +13,6 @@ $red: #f23071;
 $blue: #30d2f2;
 $blue2: #4790cc;
 
-// 颜色
 @mixin cl($val){
 	color: $val;
 }
@@ -24,7 +23,6 @@ $blue2: #4790cc;
 	border-color: $val;
 }
 
-// 文字
 @mixin ff($val: '微软雅黑'){
 	font-family: $val;
 }
@@ -35,7 +33,7 @@ $blue2: #4790cc;
 	font-weight: $val;
 }
 
-// 1px边框
+// border 1px
 @mixin bor1-base($type){
 	&::#{$type}{
 		display: block;
@@ -94,22 +92,18 @@ $blue2: #4790cc;
 	}	
 }
 
-// 圆角
 @mixin borR($val: 5px){
 	border-radius: $val;
 }
 
-// 盒子类型
 @mixin bs($val: border-box){
 	box-sizing: $val;
 }
 
-// 层叠性
 @mixin zIdx($val){
 	z-index: $val;
 }
 
-// 背景图片
 @mixin bgImg($val){
 	background: url('assets/img/#{$val}') no-repeat left top;
 }
@@ -117,7 +111,6 @@ $blue2: #4790cc;
 	background-size: $x $y;
 }
 
-// 圆形图片
 @mixin roundImg($val){
 	width: $val;
 	height: $val;
